@@ -10,10 +10,10 @@ En este blog comparto mis proyectos, mis hobbies y un poco de lo que me inspira 
 * JavaScript
 
 ### Imagenes de ejemplo
-![Imagen de ejemplo](https://i.ibb.co/nsVLTrQ/i-Phone-13-PRO-MAX.png)
+![Imagen de ejemplo](https://i.ibb.co/wgNKmWZ/Macbook-Air-1.png)
 
 <p align="center">
-  <img src="https://i.ibb.co/NKxHqb4/Macbook-Air.png" alt="Imagen de ejemplo" />
+  <img src="https://i.ibb.co/rmffJ8x/i-Phone-13-PRO-MAX-1.png" alt="Imagen de ejemplo" />
 </p>
 
 

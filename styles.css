@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background: #ffffff;
+    --text: #000000;
+    --secondary-text: #666666;
+    --accent: #ea899a;
+}
+
+.dark-theme {
+    --background: #1a1a1a;
+    --text: #ffffff;
+    --secondary-text: #a3a3a3;
+    --border: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: var(--border);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info p {
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: var(--background);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.work-item {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.work-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+
+.work-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.work-date {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.skills-grid i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.skills-grid i:hover {
+    transform: scale(1.2);
+}
+
+.education-item {
+    margin-bottom: 1.5rem;
+}
+
+.education-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.education-item p {
+    color: var(--secondary-text);
+}
+
+.hobbies-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.hobby-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hobby-image {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projects-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.project-item {
+    flex: 1;
+    background-color: #ea899a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-item h3 {
+    margin: 1rem;
+}
+
+.project-item p {
+    margin: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .projects-row {
+        flex-direction: column;
+    }
+}
+
+.skill-item[data-skill="HTML"] { --skill-bg: var(--skill-html); --skill-text: white; }
+.skill-item[data-skill="CSS"] { --skill-bg: var(--skill-css); --skill-text: white; }
+.skill-item[data-skill="JavaScript"] { --skill-bg: var(--skill-js); --skill-text: black; }
+.skill-item[data-skill="React"] { --skill-bg: var(--skill-react); --skill-text: black; }
+.skill-item[data-skill="Figma"] { --skill-bg: var(--skill-figma); --skill-text: white; }
+.skill-item[data-skill="MySQL"] { --skill-bg: var(--skill-mysql); --skill-text: white; }
+.skill-item[data-skill="Git"] { --skill-bg: var(--skill-git); --skill-text: white; }
+.skill-item[data-skill="Terminal"] { --skill-bg: var(--skill-terminal); --skill-text: white; }
+.skill-item[data-skill="Node.js"] { --skill-bg: var(--skill-nodejs); --skill-text: white; }
+.skill-item[data-skill="Bootstrap"] { --skill-bg: #563d7c; --skill-text: white; }
+.skill-item[data-skill="Adobe XD"] { --skill-bg: #ff6e2e; --skill-text: white; }
+.skill-item[data-skill="PHP"] { --skill-bg: #7070b5; --skill-text: white; }
+.skill-item[data-skill="Python"] { --skill-bg: #3776ab; --skill-text: white; }
+.skill-item[data-skill="SQL Server"] { --skill-bg: #cc2900; --skill-text: white; }
+.skill-item[data-skill="GitHub"] { --skill-bg: #24292e; --skill-text: white; }
